@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Bar
+  - Stage
+  - Ball
+  - Goal
   - 
   - 
   - 
@@ -38,9 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3066360405
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UI
+    uniqueID: 1917402645
+    locked: 0
   - name: Effects
     uniqueID: 512783857
+    locked: 0
+  - name: Stage
+    uniqueID: 1935817221
+    locked: 0
+  - name: Game
+    uniqueID: 2071301775
     locked: 0
