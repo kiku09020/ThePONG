@@ -20,8 +20,6 @@ namespace Game.Bar {
         public void SetMoveInputData(InputAction.CallbackContext ctx)
         {
             InputAxisY = ctx.ReadValue<float>();
-
-            print($"provider: {InputAxisY}");
         }
 
         public void ResetMoveInputData(InputAction.CallbackContext ctx)

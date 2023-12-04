@@ -10,7 +10,7 @@ namespace DesignPatterns.Singleton {
 			get {
 				if (!instance) {
 					// 既存のインスタンス検索
-					instance = FindObjectOfType<T>();
+					instance = FindFirstObjectByType<T>();
 
 					// 無ければ新規作成
 					if (!instance) {

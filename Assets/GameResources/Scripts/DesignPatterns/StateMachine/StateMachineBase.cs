@@ -13,25 +13,45 @@ namespace DesignPatterns.State
 		[SerializeField, Tooltip("初期状態")] T initState;
 		[SerializeField, Tooltip("状態リスト")] protected List<T> states = new List<T>();
 
+		[Header("Parameters")]
+		[SerializeField] bool messageIsCalledInThis;
+
 		/// <summary> 現在の状態 </summary>
 		public T CurrentState { get; protected set; }
 
-		//--------------------------------------------------
-		protected void Awake()
-		{
-			states.ForEach(state => {
-				state.OnStateTransition += StateTransition;     // 状態遷移イベント追加
-				state.ID = states.IndexOf(state);				// IDを設定
-			});
+        //--------------------------------------------------
 
-			StateSetup();
-		}
+        private void Awake()
+        {
+			if (messageIsCalledInThis) {
+				StateSetup();
+			}
+        }
 
-		//--------------------------------------------------
-		/// <summary> 初期状態セットアップ </summary>
-		public void StateSetup()
+        private void Update()
+        {
+			if (messageIsCalledInThis) {
+				OnUpdate();
+			}
+        }
+
+        private void FixedUpdate()
+        {
+			if (messageIsCalledInThis) {
+				OnFixedUpdate();
+			}
+        }
+
+        //--------------------------------------------------
+        /// <summary> 初期状態セットアップ </summary>
+        public void StateSetup()
 		{
-			if (CurrentState != null) {
+            states.ForEach(state => {
+                state.OnStateTransition += StateTransition;     // 状態遷移イベント追加
+                state.ID = states.IndexOf(state);               // IDを設定
+            });
+
+            if (CurrentState != null) {
 				CurrentState.OnExit();
 			}
 

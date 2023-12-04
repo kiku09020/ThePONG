@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class BallMover : BallComponent {
     /* Fields */
-    [SerializeField] float minHitResult = .25f;
-    [SerializeField] Vector2 moveDir = Vector2.left;
-
     [SerializeField] Rigidbody2D rb;
 
     Vector2 vel;
@@ -28,13 +25,14 @@ public class BallMover : BallComponent {
     {
         base.OnStart();
 
-        moveDir.Normalize();
-        vel = moveDir * core.MoveSpeed;
+        vel = core.Direction * core.MoveSpeed;
         rb.velocity = vel;
     }
 
-    private void Update()
+    protected override void OnUpdate()
     {
+        base.OnUpdate();
+
         vel = rb.velocity;
     }
 
@@ -46,11 +44,11 @@ public class BallMover : BallComponent {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bar")) return;
 
         var normal = collision.contacts[0].normal;
-        moveDir = Vector2.Reflect(vel, normal).normalized;
 
-        vel = moveDir * core.MoveSpeed;
+        var dir = Vector2.Reflect(vel, normal).normalized;
+        core.SetDirection(dir);
+
+        vel = core.Direction * core.MoveSpeed;
         rb.velocity = vel;
-
-        print($"ball magnitude: {rb.velocity.magnitude}");
     }
 }

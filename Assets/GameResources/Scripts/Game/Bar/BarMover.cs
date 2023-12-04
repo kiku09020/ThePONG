@@ -25,8 +25,6 @@ namespace Game.Bar {
         /* Methods */
         void Move()
         {
-            print(core.InputProvider.InputAxisY);
-
             if (core.InputProvider.IsInputAxisY) {
                 // ˆÚ“®
                 core.transform.transform.Translate(Vector3.up * core.InputProvider.InputAxisY * _speed * Time.deltaTime);

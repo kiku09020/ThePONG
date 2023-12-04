@@ -6,9 +6,11 @@ using UnityEngine;
 namespace Game.Ball {
     public class PooledBall : PooledObject<PooledBall> {
 		/* Fields */
+		[SerializeField] BallCore core;
 
 		//-------------------------------------------------------------------
 		/* Properties */
+		public BallCore Core => core;
 
 		//-------------------------------------------------------------------
 		/* Messages */

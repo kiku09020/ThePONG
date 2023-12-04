@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -32, y: -32}
+  m_SizeDelta: {x: -48, y: -48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8067452361382448169
 CanvasRenderer:
@@ -110,14 +110,6 @@ PrefabInstance:
     - target: {fileID: 1724939146479303674, guid: e0c11fccdc4298d448d52dff8eb28a2f, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724939146479303674, guid: e0c11fccdc4298d448d52dff8eb28a2f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724939146479303674, guid: e0c11fccdc4298d448d52dff8eb28a2f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1724939146479303674, guid: e0c11fccdc4298d448d52dff8eb28a2f, type: 3}
       propertyPath: m_LocalPosition.x

@@ -152,7 +152,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &8087511330756936125
 MonoBehaviour:
@@ -166,7 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b2e7cc4e339e64899e9411f78bec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  shotSpeed: 20
+  moveSpeedBase: 40
 --- !u!114 &2425666440822697351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doGetActionOnCreated: 0
+  core: {fileID: 8087511330756936125}
 --- !u!114 &7329409393124781396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
-  minHitResult: 0.25
-  moveDir: {x: -1, y: 0}
   rb: {fileID: 8687701520096576880}

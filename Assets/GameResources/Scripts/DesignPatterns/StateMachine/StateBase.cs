@@ -28,5 +28,11 @@ namespace DesignPatterns.State
 		public virtual void OnUpdate() { }
 		public virtual void OnFixedUpdate() { }
 		public virtual void OnExit() { }
-	}
+
+        protected void Awake(){}
+		protected void Start() { }
+		protected void Update() { }
+		protected void FixedUpdate() { }
+		protected void OnDestroy() { }
+    }
 }

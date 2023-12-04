@@ -1,14 +1,12 @@
-﻿using System.Collections;
+﻿using GameController.State;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 
-	//--------------------------------------------------
+    //--------------------------------------------------
 
-	void Update()
-	{
 
-	}
 }

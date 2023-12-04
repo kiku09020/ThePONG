@@ -5,9 +5,8 @@ using UnityEngine;
 
 namespace Game.Bar {
     /// <summary> ÉoÅ[ÇÃîΩéÀèàóù </summary>
-    public class BarReflecter : BarComponent {
+    public class BarReflector : BarComponent {
         /* Fields */
-        [SerializeField] float maxReflectionAngle = 30;
 
         //-------------------------------------------------------------------
         /* Properties */
@@ -19,8 +18,6 @@ namespace Game.Bar {
             base.OnHitBall(collision);
 
             Reflect(collision);
-
-            print("Hit!");
         }
 
         //-------------------------------------------------------------------
