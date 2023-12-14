@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartBeatDuration: 15
+  queryCount: 5
 --- !u!114 &708121524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634a926ebb9c29342b119f2a3d9133ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allocationCount: 1
 --- !u!4 &708121525
 Transform:
   m_ObjectHideFlags: 0
@@ -582,6 +584,10 @@ MonoBehaviour:
   disconnectButton: {fileID: 1005672326}
   dialogUI: {fileID: 30311566}
   dialogMessageText: {fileID: 374374723}
+  connectingMessage: "\u63A5\u7D9A\u4E2D\u2026"
+  waitingMessage: "\u30D7\u30EC\u30A4\u30E4\u30FC\u3092\u5F85\u6A5F\u4E2D\u2026"
+  deletedMessage: "\u30DB\u30B9\u30C8\u306B\u3088\u3063\u3066\u3001\u30ED\u30D3\u30FC\u304C\u524A\u9664\u3055\u308C\u307E\u3057\u305F\u2026\u3002"
+  matchingMessage: "\u30D7\u30EC\u30A4\u30E4\u30FC\u304C\u96C6\u307E\u308A\u307E\u3057\u305F\uFF01"
 --- !u!114 &708121527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,8 +600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc27d36b9385da40929e2a12e644e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presenter: {fileID: 708121526}
-  isTranstionScene: 0
+  isTranstionScene: 1
+  transitoinWaitDuration: 3
 --- !u!1 &870061671
 GameObject:
   m_ObjectHideFlags: 0

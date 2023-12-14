@@ -2,7 +2,6 @@ using DesignPatterns.Singleton;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
 using Unity.Services.Relay;
@@ -11,13 +10,7 @@ using UnityEngine;
 namespace Network {
 	public class NetworkRelayManager : Singleton<NetworkRelayManager> {
 		/* Fields */
-		const int ALLOCATION_COUNT = 1;
-
-		//-------------------------------------------------------------------
-		/* Properties */
-
-		//-------------------------------------------------------------------
-		/* Messages */
+		[SerializeField] int allocationCount = 1;
 
 		//-------------------------------------------------------------------
 		/* Methods */
@@ -25,7 +18,7 @@ namespace Network {
 		{
 			try {
 				// 割り当て作成
-				var allocation = await RelayService.Instance.CreateAllocationAsync(ALLOCATION_COUNT);
+				var allocation = await RelayService.Instance.CreateAllocationAsync(allocationCount);
 
 				// サーバーデータ設定
 				var relayServerData = new RelayServerData(allocation, "dtls");
